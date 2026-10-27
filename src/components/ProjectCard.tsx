@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
-          <div className="flex flex-col items-center justify-center p-6 text-center w-full h-full bg-gradient-to-br from-zinc-900 via-zinc-950 to-[#071318]">
+          <div className="flex flex-col items-center justify-center p-6 text-center w-full h-full bg-linear-to-br from-zinc-900 via-zinc-950 to-[#071318]">
             <div className="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400 mb-2 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Card Content */}
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
         <Link
           href={`/projects/${project.slug}`}
           className="focus:outline-none focus:underline"
@@ -74,7 +74,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </h3>
         </Link>
 
-        <p className="mt-2.5 text-sm text-zinc-400 leading-relaxed line-clamp-2 flex-grow">
+        <p className="mt-2.5 text-sm text-zinc-400 leading-relaxed line-clamp-2 grow">
           {project.description}
         </p>
 

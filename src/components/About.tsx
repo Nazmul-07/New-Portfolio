@@ -36,7 +36,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 relative bg-zinc-950/60 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-1/4 w-125 h-125 bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -47,7 +47,7 @@ export default function About() {
             Background & Purpose
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">Me</span>
+            About <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-teal-300">Me</span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg">
             Dedicated frontend developer merging technical fundamentals with clean, aesthetic user interfaces.
@@ -134,7 +134,7 @@ export default function About() {
               {/* Code Snippet */}
               <div className="p-5 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto text-zinc-300">
                 <p className="text-zinc-500 mb-2">
-                  <span className="text-zinc-600">// Professional profile summary</span>
+                  <span className="text-zinc-600">Professional profile summary</span>
                 </p>
                 <p>
                   <span className="text-purple-400">const</span>{" "}

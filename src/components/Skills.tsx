@@ -144,7 +144,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 relative bg-zinc-950/60 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-cyan-500/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-100 bg-cyan-500/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -155,7 +155,7 @@ export default function Skills() {
             Technical Stack
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">Technologies</span>
+            Skills & <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-teal-300">Technologies</span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg">
             A comprehensive overview of my core engineering toolset across modern frontend, backend, databases, and workflow utilities.
