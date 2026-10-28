@@ -3,7 +3,7 @@ export interface Education {
   institution: string;
   field: string;
   session: string;
-  result?: string;
+  dept?: string;
   description: string;
 }
 

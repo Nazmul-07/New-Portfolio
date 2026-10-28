@@ -93,7 +93,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 w-full sm:w-auto">
               <Link
                 href="/#projects"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-sm transition-all shadow-[0_0_25px_rgba(6,182,212,0.35)] hover:shadow-[0_0_35px_rgba(6,182,212,0.55)] flex items-center justify-center gap-2 group"
+                className="w-full sm:w-56 h-14 px-7 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-sm transition-all shadow-[0_0_25px_rgba(6,182,212,0.35)] hover:shadow-[0_0_35px_rgba(6,182,212,0.55)] flex items-center justify-center gap-2 group"
               >
                 <span>View My Work</span>
                 <svg
@@ -116,11 +116,21 @@ export default function Hero() {
                   href={profile.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800/90 border border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
+                  aria-label="View resume PDF in a new tab"
+                  className="group w-full sm:w-56 h-14 px-4 rounded-xl bg-zinc-900/80 hover:bg-cyan-950/40 border border-zinc-700 hover:border-cyan-400/70 text-zinc-100 transition-all flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(6,182,212,0.08)] hover:shadow-[0_0_25px_rgba(6,182,212,0.18)]"
                 >
-                  <span>Resume</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-500/20 bg-cyan-950/60 text-cyan-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-900/60 transition-colors">
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M7 3.75h7l4.25 4.25v12A1.25 1.25 0 0 1 17 21.25H7A1.25 1.25 0 0 1 5.75 20V5A1.25 1.25 0 0 1 7 3.75Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.} d="M14 4v4h4M8.5 13h7m-7 3.5h7" />
+                    </svg>
+                  </span>
+                  <span className="flex flex-col items-start">
+                    <span className="text-sm font-semibold group-hover:text-cyan-200 transition-colors">View Resume</span>
+                    {/* <span className="text-[11px] text-zinc-500">PDF · Opens in a new tab</span> */}
+                  </span>
+                  <svg className="ml-1 h-4 w-4 shrink-0 text-zinc-500 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17 17 7M8 7h9v9" />
                   </svg>
                 </a>
               ) : (
@@ -141,7 +151,7 @@ export default function Hero() {
               {profile.socialLinks
                 .filter((s) => Boolean(s.url))
                 .map((s) => (
-                  <a
+                  <Link
                     key={s.name}
                     href={s.url}
                     target="_blank"
@@ -150,7 +160,7 @@ export default function Hero() {
                     className="p-2.5 rounded-xl bg-zinc-900/80 hover:bg-cyan-950/60 border border-zinc-800 hover:border-cyan-500/50 text-zinc-400 hover:text-cyan-400 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]"
                   >
                     {renderSocialIcon(s.name)}
-                  </a>
+                  </Link>
                 ))}
             </div>
           </div>

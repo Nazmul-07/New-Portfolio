@@ -24,7 +24,7 @@ export default function Education() {
           {education.map((item, index) => (
             <div key={`${item.degree}-${index}`} className="relative group">
               {/* Timeline marker */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full bg-zinc-950 border-2 border-cyan-400 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300 shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+              <div className="absolute -left-7.75 sm:-left-9.75 top-1 w-4 h-4 rounded-full bg-zinc-950 border-2 border-cyan-400 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-300 shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
 
               {/* Card */}
               <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800/80 hover:border-cyan-500/40 p-6 sm:p-8 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-[0_0_25px_rgba(6,182,212,0.1)]">
@@ -45,11 +45,11 @@ export default function Education() {
 
                 <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400 font-mono mb-4">
                   <span>Field: {item.field}</span>
-                  {item.result && (
+                  {item.dept && (
                     <>
                       <span>•</span>
                       <span className="text-emerald-400 font-semibold bg-emerald-950/40 border border-emerald-800/40 px-2 py-0.5 rounded">
-                        Result: {item.result}
+                        {item.dept}
                       </span>
                     </>
                   )}

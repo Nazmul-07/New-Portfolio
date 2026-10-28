@@ -23,48 +23,35 @@ export default function Skills() {
         );
       case "css3":
         return (
-          <svg className="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L3 5l1.6 14.5L12 22l7.4-2.5L21 5l-9-3zm5.8 5.7H7.4l.2 2.5h8.9l-.3 3.5H9.8l.2 2h6.1l-.4 4.5-3.7 1-3.7-1-.3-3H6.1l.4 5 5.5 1.5 5.5-1.5.8-9.5h.3z" />
+          <svg className="h-9 w-9" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#264de4" d="M3 2h18l-1.64 18.5L12 22l-7.36-1.5L3 2Z" />
+            <path fill="#2965f1" d="M12 3.5h7.35l-1.4 15.7L12 20.5V3.5Z" />
+            <text x="12" y="17.5" textAnchor="middle" fill="#fff" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="700">3</text>
           </svg>
         );
       case "javascript":
         return (
-          <svg className="w-8 h-8 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3 3h18v18H3V3zm10.7 13.9c.7.4 1.5.7 2.3.7.9 0 1.5-.4 1.5-1.1 0-.7-.5-1-1.6-1.5-1.5-.6-2.5-1.5-2.5-2.9 0-1.6 1.3-2.8 3.2-2.8 1 0 1.8.3 2.4.7l-.6 1.7c-.5-.3-1.1-.5-1.8-.5-.8 0-1.3.4-1.3 1 0 .6.4.9 1.6 1.4 1.6.7 2.5 1.6 2.5 3 0 1.8-1.4 2.9-3.4 2.9-1.2 0-2.3-.4-3-1l.7-1.6zm-5.7.2c.4.3.9.5 1.4.5.8 0 1.3-.4 1.3-1.4v-5.9h2.1v6c0 1.8-1.1 2.6-2.7 2.6-.9 0-1.7-.2-2.2-.6l.1-1.2z" />
+          <svg className="h-9 w-9" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#f7df1e" d="M2 2h20v20H2z" />
+            <text x="12" y="17" textAnchor="middle" fill="#111" fontFamily="Arial, sans-serif" fontSize="10" fontWeight="700">JS</text>
           </svg>
         );
       case "typescript":
         return (
-          <svg className="w-8 h-8 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3 3h18v18H3V3zm8.3 7.8H9.1v6.9H7.3v-6.9H5.1V9.2h6.2v1.6zm4.8 5.4c.7.4 1.5.7 2.3.7.9 0 1.5-.4 1.5-1.1 0-.7-.5-1-1.6-1.5-1.5-.6-2.5-1.5-2.5-2.9 0-1.6 1.3-2.8 3.2-2.8 1 0 1.8.3 2.4.7l-.6 1.7c-.5-.3-1.1-.5-1.8-.5-.8 0-1.3.4-1.3 1 0 .6.4.9 1.6 1.4 1.6.7 2.5 1.6 2.5 3 0 1.8-1.4 2.9-3.4 2.9-1.2 0-2.3-.4-3-1l.7-1.6z" />
+          <svg className="h-9 w-9" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#3178c6" d="M2 2h20v20H2z" />
+            <text x="12" y="17" textAnchor="middle" fill="#fff" fontFamily="Arial, sans-serif" fontSize="10" fontWeight="700">TS</text>
           </svg>
         );
       case "react":
         return (
           <svg className="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="2" />
-            <path
-              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
-              opacity="0.2"
-            />
-            <path
-              d="M12 6.5c4.7 0 8.5 2.5 8.5 5.5s-3.8 5.5-8.5 5.5S3.5 15 3.5 12s3.8-5.5 8.5-5.5m0-1.5C6.7 5 2 8.1 2 12s4.7 7 10 7 10-3.1 10-7-4.7-7-10-7z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.2"
-            />
-            <path
-              d="M7.2 9.2c2.4-4 6.5-5.8 9.1-4.3s2.4 6-0.1 10-6.5 5.8-9.1 4.3-2.3-6 .1-10z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.2"
-            />
-            <path
-              d="M16.8 9.2c2.4 4 2.6 8.5 0.1 10s-6.7-.3-9.1-4.3-2.6-8.5-.1-10 6.7.3 9.1 4.3z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.2"
-            />
+            <g fill="none" stroke="currentColor" strokeWidth="1.35">
+              <ellipse cx="12" cy="12" rx="9" ry="3.5" />
+              <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)" />
+              <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)" />
+            </g>
+            <circle cx="12" cy="12" r="1.7" />
           </svg>
         );
       case "next.js":
@@ -76,20 +63,22 @@ export default function Skills() {
       case "tailwind css":
         return (
           <svg className="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 6c-3.3 0-5.3 1.7-6 5 1.3-1.7 2.8-2.3 4.5-2 1 .1 1.7.9 2.5 1.7C14.3 12 16 13.5 19.5 13.5c3.3 0 5.3-1.7 6-5-1.3 1.7-2.8 2.3-4.5 2-1-.1-1.7-.9-2.5-1.7C17.2 7.5 15.5 6 12 6zM4.5 12.5C1.2 12.5-.8 14.2-1.5 17.5c1.3-1.7 2.8-2.3 4.5-2 1 .1 1.7.9 2.5 1.7C6.8 18.5 8.5 20 12 20c3.3 0 5.3-1.7 6-5-1.3 1.7-2.8 2.3-4.5 2-1-.1-1.7-.9-2.5-1.7-1.3-1.3-3-2.8-6.5-2.8z" />
+            <path d="M12 5.5c-3.2 0-5.3 1.7-6.2 5.1 1.3-1.7 2.8-2.3 4.5-2 1 .2 1.8 1 2.6 1.8 1.3 1.3 2.8 2.8 6.3 2.8 3.2 0 5.3-1.7 6.2-5.1-1.3 1.7-2.8 2.3-4.5 2-1-.2-1.8-1-2.6-1.8-1.3-1.3-2.8-2.8-6.3-2.8z" transform="translate(-1.5 0)" />
+            <path d="M8 11.5c-3.2 0-5.3 1.7-6.2 5.1 1.3-1.7 2.8-2.3 4.5-2 1 .2 1.8 1 2.6 1.8 1.3 1.3 2.8 2.8 6.3 2.8 3.2 0 5.3-1.7 6.2-5.1-1.3 1.7-2.8 2.3-4.5 2-1-.2-1.8-1-2.6-1.8-1.3-1.3-2.8-2.8-6.3-2.8z" />
           </svg>
         );
       case "node.js":
         return (
-          <svg className="w-8 h-8 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l9 5.2v10.4L12 22.8 3 17.6V7.2L12 2zm0 2.3L4.8 8.5v7l7.2 4.2 7.2-4.2v-7L12 4.3z" />
-            <path d="M12 7l4.5 2.6v5.2L12 17.4l-4.5-2.6V9.6L12 7z" />
+          <svg className="w-8 h-8 text-emerald-400" viewBox="0 0 24 24" fill="none">
+            <path d="m12 2.5 8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5L12 2.5Z" stroke="currentColor" strokeWidth="1.8" />
+            <path d="M8 15.8V8.2h1.7l4.6 4.9V8.2H16v7.6h-1.7l-4.6-4.9v4.9H8Z" fill="currentColor" />
           </svg>
         );
       case "express.js":
         return (
-          <svg className="w-8 h-8 text-zinc-300" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-4v-1.8h4v1.8zm3-3.6h-7v-1.8h7v1.8zm1-3.6H7V7.5h10v1.8z" />
+          <svg className="w-8 h-8 text-zinc-200" viewBox="0 0 32 24" fill="none">
+            <text x="16" y="15.5" textAnchor="middle" fill="currentColor" fontFamily="Arial, sans-serif" fontSize="8.5" fontWeight="600" letterSpacing=".4">express</text>
+            <text x="16" y="21" textAnchor="middle" fill="currentColor" fontFamily="Arial, sans-serif" fontSize="4.5" letterSpacing="1.2">JS</text>
           </svg>
         );
       case "rest api":
@@ -101,7 +90,7 @@ export default function Skills() {
       case "mongodb":
         return (
           <svg className="w-8 h-8 text-emerald-500" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2c-.3 0-.6.1-.8.3C10.5 3 7 7.5 7 13.5c0 3.3 1.8 6.3 4.6 7.8l.4.2.4-.2c2.8-1.5 4.6-4.5 4.6-7.8 0-6-3.5-10.5-4.2-11.2-.2-.2-.5-.3-.8-.3zm-.2 2.7c1.3 1.8 3.4 5.3 3.4 8.8 0 2.2-1.1 4.3-2.9 5.5-.3-1.6-.5-3.3-.5-5V4.7z" />
+            <path d="M12.1 2.2c-.4 3.1-1.2 4.2-2.2 5.7-1.1 1.6-2.2 3.2-2.2 6.1 0 3.7 2 6.8 4.3 7.8V13h1v8.8c2.2-1 4.1-4 4.1-7.7 0-4.2-2-8.2-5-11.9Z" />
           </svg>
         );
       case "git":
@@ -128,8 +117,12 @@ export default function Skills() {
         );
       case "postman":
         return (
-          <svg className="w-8 h-8 text-orange-400" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5l-4.2-2.4 4.2-2.4v4.8zm3.5-5.5L8.2 6.8l8.3 4.2zm-.5 3.5v-1.8l2.5-1.4v4.6l-2.5-1.4z" />
+          <svg className="w-8 h-8 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="8" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="16" cy="8" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="16" cy="16" r="1.2" fill="currentColor" stroke="none" />
+            <path strokeLinecap="round" d="m9 11.4 5.8-2.8M9 12.6l5.8 2.8M16 9.5v5" />
           </svg>
         );
       default:

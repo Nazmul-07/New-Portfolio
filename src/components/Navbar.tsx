@@ -49,9 +49,17 @@ export default function Navbar() {
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-zinc-900 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/50 hover:border-cyan-400 transition-all"
+                aria-label="View resume PDF in a new tab"
+                className="group ml-2 inline-flex items-center gap-2 rounded-lg border border-cyan-500/30 bg-cyan-950/30 px-3.5 py-2 text-xs font-semibold text-cyan-200 transition-all hover:border-cyan-400/70 hover:bg-cyan-900/40 hover:text-white"
               >
-                Resume ↗
+                <svg className="h-4 w-4 text-cyan-400 transition-transform group-hover:-rotate-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M7 3.75h7l4.25 4.25v12A1.25 1.25 0 0 1 17 21.25H7A1.25 1.25 0 0 1 5.75 20V5A1.25 1.25 0 0 1 7 3.75Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M14 4v4h4M8.5 13h7m-7 3.5h7" />
+                </svg>
+                <span>Resume</span>
+                <svg className="h-3 w-3 text-cyan-500/70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17 17 7M8 7h9v9" />
+                </svg>
               </a>
             ) : (
               <span
@@ -121,9 +129,14 @@ export default function Navbar() {
                   href={profile.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-center px-4 py-2 rounded-lg text-sm font-semibold bg-zinc-900 border border-cyan-500/40 text-cyan-300"
+                  aria-label="View resume PDF in a new tab"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-cyan-500/30 bg-cyan-950/30 px-4 py-2.5 text-sm font-semibold text-cyan-200 transition-colors hover:border-cyan-400/60 hover:bg-cyan-900/40"
                 >
-                  View Resume
+                  <svg className="h-4 w-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M7 3.75h7l4.25 4.25v12A1.25 1.25 0 0 1 17 21.25H7A1.25 1.25 0 0 1 5.75 20V5A1.25 1.25 0 0 1 7 3.75Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M14 4v4h4M8.5 13h7m-7 3.5h7" />
+                  </svg>
+                  View Resume <span className="text-[11px] text-cyan-500/80">PDF ↗</span>
                 </a>
               ) : null}
               <Link

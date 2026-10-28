@@ -10,7 +10,7 @@ export const profile: Profile = {
   education: "Diploma in Computer Science & Technology",
   bio: "Frontend Developer and Problem Solver specializing in building performant, responsive, and visually modern web applications using React, Next.js, and TypeScript.",
   profileImage: "/images/Profile_pic.png",
-  resumeUrl: "wo", // Editable: Path or link to your resume (e.g. "/resume.pdf")
+  resumeUrl: "/Md_Nazmul_Hosen_Resume.pdf", // Editable: Path or link to your resume (e.g. "/resume.pdf")
   email: "ytnazmul535@gmail.com", // Editable: Your contact email (e.g. "contact@nazmul.dev")
   location: "Bangladesh",
   githubUrl: "https://github.com/Nazmul-07",
@@ -21,15 +21,15 @@ export const profile: Profile = {
     },
     {
       name: "LinkedIn",
-      url: "www.linkedin.com/in/nazmulhosen07", // Editable
+      url: "https://www.linkedin.com/in/nazmulhosen07/", // Editable
     },
     {
       name: "Twitter",
-      url: "www.twitter.com/nazmul-07", // Editable
+      url: "https://twitter.com/nazmul-07", // Editable
     },
     {
       name: "Email",
-      url: "ytnazmul535@gmail.com", // Editable
+      url: "mailto:ytnazmul535@gmail.com", // Editable
     },
   ],
 };
