@@ -90,8 +90,8 @@ export const projects: Project[] = [
       "News API",
     ],
 
-    liveUrl: "",
-    githubUrl: "",
+    liveUrl: "https://bangla-news-24-umber.vercel.app/",
+    githubUrl: "https://github.com/Nazmul-07/Bangla-News-24",
 
     features: [
       "Browse news categories",
