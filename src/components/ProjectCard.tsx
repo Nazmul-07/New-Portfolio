@@ -67,7 +67,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="p-6 flex flex-col grow">
         <Link
           href={`/projects/${project.slug}`}
-          className="focus:outline-none focus:underline"
+          className="focus:outline-none focus:underline after:absolute after:inset-0 after:rounded-2xl focus-visible:after:outline focus-visible:after:outline-cyan-400"
         >
           <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-200">
             {project.title}
@@ -98,7 +98,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Card Actions */}
-        <div className="mt-6 pt-4 border-t border-zinc-800/70 flex items-center justify-between gap-3">
+        <div className="relative z-10 mt-6 pt-4 border-t border-zinc-800/70 flex items-center justify-between gap-3">
           <Link
             href={`/projects/${project.slug}`}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 group/link transition-colors"
@@ -185,4 +185,3 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     </div>
   );
 }
-

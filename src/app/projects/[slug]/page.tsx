@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import type { Metadata } from "next";
@@ -31,7 +32,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({
+async function ProjectDetails({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -160,29 +161,14 @@ export default async function ProjectPage({
         </div>
 
         {/* Project Image Banner */}
-        <div className="relative aspect-video w-full rounded-2xl bg-zinc-900/90 border border-zinc-800 overflow-hidden mb-12 shadow-2xl flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center p-8 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-cyan-950/80 border border-cyan-800/60 flex items-center justify-center text-cyan-400 mb-3 shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
-            <p className="text-xl font-bold text-white">{project.title}</p>
-            <p className="text-xs font-mono text-cyan-400 mt-1">
-              Path: {project.image}
-            </p>
-          </div>
+        <div className="group relative aspect-video w-full rounded-2xl bg-zinc-900/90 border border-zinc-800 overflow-hidden mb-12 shadow-2xl">
+          <Image
+            src={project.image}
+            alt={`${project.title} project preview`}
+            fill
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
 
         {/* Technologies Grid */}
@@ -295,3 +281,30 @@ export default async function ProjectPage({
   );
 }
 
+export default function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-[#0a0a0a] py-12 text-zinc-100 sm:py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-6 text-sm text-cyan-400" role="status">
+              Loading project...
+            </p>
+            <div className="mb-10 space-y-4">
+              <div className="h-8 w-40 animate-pulse rounded-full bg-zinc-900" />
+              <div className="h-12 w-2/3 animate-pulse rounded bg-zinc-900" />
+              <div className="h-6 w-full max-w-3xl animate-pulse rounded bg-zinc-900" />
+            </div>
+            <div className="aspect-video w-full animate-pulse rounded-2xl border border-zinc-800 bg-zinc-900/90" />
+          </div>
+        </main>
+      }
+    >
+      <ProjectDetails params={params} />
+    </Suspense>
+  );
+}
